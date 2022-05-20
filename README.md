@@ -15,4 +15,4 @@ Define the schedular in schedular.py, then change the line in main.py import <sc
 Change the content in postprocessing.py
   
 ## Dependancies
-tensorflow, numpy, matplotlib, sklearn
+python, tensorflow, numpy, matplotlib, sklearn
