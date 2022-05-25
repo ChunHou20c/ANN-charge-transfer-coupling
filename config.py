@@ -1,18 +1,28 @@
 # this configuration file define the parameters used in the training
-FEATURE = "inter_molecular_element.npy"
+DATA_DIRECTORY = "/home/ChunHou/Project/ANN_charge-transfer-coupling/data/DBT1"
+FEATURE = "CM_matrix.npy"
 RESULT = "results.npy"
-LEARNING_RATE = 0.003
-LOSS = 'MeanAbsolutePercentageError'
-METRICS = 'MeanSquaredError'
-TEST_SIZE = 0.1
+LEARNING_RATE = 0.006
+METRICS = 'MeanAbsolutePercentageError'
+LOSS = 'Huber'
+TEST_SIZE = 0.2
+USE_TEST_SET = True
 SCALE = False
 BATCH_SIZE = 20
-EPOCHES = 250
+EPOCHES = 10
 SAVE_PATH = 'result'
-DECAY_RATE = 0.03
+DECAY = True
+DECAY_RATE = 0.02
 
+EARLY_STOP = False
+#configuration related to early stop
+#option = "loss" or "metrics"
+MONITOR = "loss" 
+PATIENCE = 3 
 
-#if SCALE = true
+CHECKPOINT = True
+CHECKPOINT_PATH = "checkpoint/cp.ckpt"
+
 if SCALE == True:
     global FEATURE_RANGE
     FEATURE_RANGE = (0,1)

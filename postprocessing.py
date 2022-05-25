@@ -11,7 +11,7 @@ def epoches_graph(Dictionary):
     metrics = keys[1]
     val_loss = keys[2]
     val_metrics = keys[3]
-    _epoches = [i for i in range(config.EPOCHES)]
+    _epoches = [i for i in range(len(Dictionary[loss]))]
 
     plt.plot(_epoches, Dictionary[loss], '--r',label=config.LOSS)
     plt.plot(_epoches, Dictionary[val_loss], 'g',label="validation "+config.LOSS)
