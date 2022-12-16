@@ -11,6 +11,9 @@ LOSS = 'Huber'
 TEST_SIZE = 0.2
 USE_TEST_SET = True
 SCALE = False
+
+ENABLE_OVERSAMPLING = True
+
 BATCH_SIZE = 20
 EPOCHES = 10
 SAVE_PATH = 'result'
