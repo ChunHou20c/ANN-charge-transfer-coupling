@@ -5,7 +5,7 @@ import numpy as np
 import math
 import random
 
-def oversampler(x:list, y:list)->tuple[list, list]:
+def oversampler(x:np.ndarray, y:np.ndarray)->tuple[np.ndarray, np.ndarray]:
     """
     This function do the oversampling for training data
     """
@@ -41,4 +41,4 @@ def oversampler(x:list, y:list)->tuple[list, list]:
     modified_x = modified_df['coulomb matrix'].values.tolist()
     modified_y = modified_df['coupling'].values.tolist()
 
-    return modified_x, modified_y
+    return np.array(modified_x), np.array(modified_y)
