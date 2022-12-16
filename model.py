@@ -1,8 +1,7 @@
 from tensorflow import keras
-import preprocessing
 
 model = keras.Sequential([
-    keras.layers.Flatten(input_shape=preprocessing._feature[0].shape),
+    keras.layers.Flatten(input_shape=(56,56)),
     keras.layers.BatchNormalization(),
     keras.layers.Dense(36,activation='relu'),
     keras.layers.BatchNormalization(),
